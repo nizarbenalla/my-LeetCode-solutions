@@ -11,7 +11,8 @@ class Solution:
             if i not in d:
                 return False
             else :
-                if d[i]<0 : return False
+                if d[i]<0 :
+                    return False
                 d[i]-=1
                 
         return True
