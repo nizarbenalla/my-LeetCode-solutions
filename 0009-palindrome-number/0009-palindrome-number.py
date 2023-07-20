@@ -4,8 +4,7 @@ class Solution:
         reverse = 0
         temp = x
         while temp>0:
-            remainder = temp%10
-            reverse= reverse * 10 + remainder
+            reverse= reverse * 10 + temp%10
             temp //=10
         return x==reverse
         
