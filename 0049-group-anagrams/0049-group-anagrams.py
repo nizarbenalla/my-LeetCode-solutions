@@ -7,4 +7,4 @@ class Solution:
             for letter in i :
                 l[ord(letter)-97]+=1
             d[tuple(l)].append(i)
-        return [d[j] for j in d]
+        return d.values()
