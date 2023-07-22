@@ -1,14 +1,13 @@
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
-        if len(s)==1: 
-            return 1
+
         answer =0
-        wordIndex=0
-        for i in range(len(s)-1,-1,-1):
-            if s[i]!=' ':
-                wordIndex=i
-                break
-        for i in range(wordIndex,-1,-1):
-            if s[i]==' ' : return answer
+        wordIndex=len(s)-1
+        
+        while s[wordIndex]==' ':
+                wordIndex-=1
+        
+        while s[wordIndex]!=' ' and wordIndex>=0 :
             answer+=1
+            wordIndex-=1
         return answer
