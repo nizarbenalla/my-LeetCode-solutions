@@ -6,5 +6,6 @@ You'll find my collection of LeetCode solutions where I strive not only to solve
 
 
 ### TO-DO
-solve 0852 again using binary search
-solve 0238 again in 0(1) space complexity
+
+ 1. solve 0852 again using binary search
+ 2. solve 0238 again in 0(1) space complexity
