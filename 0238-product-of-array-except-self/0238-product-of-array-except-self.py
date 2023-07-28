@@ -1,16 +1,16 @@
 class Solution:
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
-            ltr=[1]*len(nums)
-            rtl=[1]*len(nums)
-            ans=[1]*len(nums)
+    def productExceptSelf(self, nombres: List[int]) -> List[int]:
+        taille = len(nombres)
+        resultat = [1] * taille
 
-            for i in range(1,len(nums)):
-                ltr[i]=ltr[i-1]*nums[i-1]
+        facteur = 1
+        for i in range(taille):
+            resultat[i] = facteur
+            facteur *= nombres[i]
 
-            for i in range(len(nums)-2,-1,-1):
-                rtl[i]= rtl[i+1]*nums[1+i]
+        facteur = 1
+        for i in range(taille - 1, -1, -1):
+            resultat[i] *= facteur
+            facteur *= nombres[i]
 
-            for i in range(len(nums)):
-                ans[i]=rtl[i]*ltr[i]
-
-            return ans
+        return resultat
