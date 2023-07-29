@@ -8,8 +8,5 @@ class Solution:
         for left in range (9,len(s)):
             d[s[right:left+1]]+=1
             right+=1
-        for i in d:
-            if d[i]>1:
-                ans.append(i)
-        return ans
+        return [i for i in d if d[i]>1]
                 
