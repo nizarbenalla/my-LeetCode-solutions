@@ -7,13 +7,11 @@ class Solution:
             for j in range(l):
                 v=matrix[i][j]
                 k=matrix[j][i]
-                if 0<v<l+1 and 0<k<l+1 : 
-                    if v in r or k in c:
-                        return False
-                    r.add(v)
-                    c.add(k)
-                else :
+                if not 0<v<l+1 or not 0<k<l+1 or v in r or k in c: 
                     return False
+                else :
+                    r.add(v)
+                    c.add(k)            
             r.clear()
             c.clear()
             
