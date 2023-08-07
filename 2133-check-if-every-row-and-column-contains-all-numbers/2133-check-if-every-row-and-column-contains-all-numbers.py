@@ -5,11 +5,13 @@ class Solution:
         l=len(matrix)
         for i in range(l):
             for j in range(l):
-                if not 0<matrix[i][j]<l+1 or not 0<matrix[j][i]<l+1 or matrix[i][j] in r or matrix[j][i] in c: 
+                v=matrix[i][j]
+                k=matrix[j][i]
+                if not 0<v<l+1 or not 0<k<l+1 or v in r or k in c: 
                     return False
                 else :
-                    r.add(matrix[i][j])
-                    c.add(matrix[j][i])            
+                    r.add(v)
+                    c.add(k)            
             r.clear()
             c.clear()
             
