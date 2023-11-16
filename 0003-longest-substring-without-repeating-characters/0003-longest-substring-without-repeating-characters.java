@@ -5,15 +5,11 @@ class Solution {
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (map.containsKey(c)) {
-                int where = map.get(c);
-                if (where >= right) {
-                    right = where + 1;
-                }
+                right = Math.max(right, map.get(c)+1);
             }
             map.put(c, i);
             left++;
             max = Math.max(max, left - right);
-
         }
         return max;
     }
