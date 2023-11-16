@@ -3,12 +3,11 @@ class Solution {
         HashMap<Character, Integer> map = new HashMap();
         int right = 0, max = 0;
         for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if (map.containsKey(c)) {
-                right = right> map.get(c)+1? right:map.get(c)+1;
+            if (map.containsKey(s.charAt(i))) {
+                right = right > map.get(s.charAt(i)) + 1 ? right : map.get(s.charAt(i)) + 1;
             }
-            map.put(c, i);
-            max = max >  i - right +1 ? max :  i - right +1;
+            map.put(s.charAt(i), i);
+            max = max > i - right + 1 ? max : i - right + 1;
         }
         return max;
     }
